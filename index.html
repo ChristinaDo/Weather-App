@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>⛅Weather App</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=The+Nautigal:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form id="search-form">
+        <input
+          id="search-form-input"
+          class="city"
+          type="text"
+          placeholder="Enter a city..."
+        />
+        <input id="search-button" class="search" type="submit" value="Search" />
+        <input
+          id="celsius-button"
+          class="active-button"
+          type="submit"
+          value="°C"
+        />
+        <input id="fahrenheit-button" class="button" type="submit" value="°F" />
+      </form>
+
+      <div class="row">
+        <div class="col-4">
+          <h1 id="city-name">Rio de Janeiro</h1>
+          <p class="date">
+            <span id="day-time">Thursday, 12:25</span> <br />
+            <span id="description">cloudy</span>
+          </p>
+        </div>
+        <div class="col-4">
+          <img class="cloud" src="images/cloud.png" alt="cloud" />
+        </div>
+        <div class="col-4">
+          <h2>26°C</h2>
+          <p>
+            Precipitation: <span id="precipitation">1% </span><br />
+            Humidity: <span id="humidity">56% </span><br />
+            Wind: <span id="wind">26 km/h</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col left-side">
+          <span class="weekdays">Sat</span> <br />
+          <img class="sun" src="images/sun.png" alt="sun" /> <br /><br />
+          <span class="bold">28°C </span><br />
+          14°C
+        </div>
+        <div class="col">
+          <span class="weekdays">Sun</span> <br />
+          <img class="sun" src="images/cloudy.png" alt="cloudy" /><br /><br />
+          <span class="bold">31°C </span><br />
+          18°C
+        </div>
+        <div class="col">
+          <span class="weekdays">Mon</span> <br />
+          <img class="sun" src="images/storm.png" alt="storm" /><br /><br />
+          <span class="bold">32°C</span> <br />
+          18°C
+        </div>
+        <div class="col">
+          <span class="weekdays">Tue</span><br />
+          <img class="sun" src="images/storm.png" alt="storm" /><br /><br />
+          <span class="bold">29°C</span> <br />
+          18°C
+        </div>
+        <div class="col right-side">
+          <span class="weekdays">Wed</span><br />
+          <img class="sun" src="images/cloudy.png" alt="cloudy" /><br /><br />
+          <span class="bold">28°C </span><br />
+          16°C
+        </div>
+      </div>
+    </div>
+    <script src="src/homework.js"></script>
+  </body>
+</html>
