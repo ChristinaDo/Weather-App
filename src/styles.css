@@ -40,6 +40,11 @@ p {
   margin: 0;
   padding: 15px 25px 0 35px;
 }
+.reference {
+  position: relative;
+  margin-top: -45px;
+  margin-left: 250px;
+}
 .city {
   border: solid rgba(162, 168, 211, 0.5);
   border-radius: 10px;
