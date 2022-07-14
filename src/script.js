@@ -37,14 +37,19 @@ function showTemperature(response) {
 
 function searchCity(event) {
   event.preventDefault();
-  let apiKey = "bb7d051a9f68e85375088e58d7ca90f9";
-  let searchInput = document.querySelector("#search-form-input").value;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemperature);
+  let city = document.querySelector("#search-form-input").value;
+  search(city);
 }
 
 let searchButton = document.querySelector("#search-button");
 searchButton.addEventListener("click", searchCity);
+
+function search(city) {
+  let apiKey = "bb7d051a9f68e85375088e58d7ca90f9";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+search("Rio de Janeiro");
 
 function showFahrenheit(event) {
   event.preventDefault();
