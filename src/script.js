@@ -27,6 +27,7 @@ function showTemperature(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -49,7 +50,6 @@ function search(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
-search("Rio de Janeiro");
 
 function showFahrenheit(event) {
   event.preventDefault();
@@ -62,8 +62,11 @@ function showFahrenheit(event) {
   celsius.classList.add("button");
 
   let h2 = document.querySelector("h2");
-  h2.innerHTML = `79°F`;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  h2.innerHTML = `${Math.round(fahrenheitTemperature)}°F`;
 }
+
+let celsiusTemperature = null;
 
 let fahrenheitButton = document.querySelector("#fahrenheit-button");
 fahrenheitButton.addEventListener("click", showFahrenheit);
@@ -79,8 +82,10 @@ function showCelsius(event) {
   fahrenheit.classList.remove("active-button");
 
   let h2 = document.querySelector("h2");
-  h2.innerHTML = `26°C`;
+  h2.innerHTML = `${Math.round(celsiusTemperature)}°C`;
 }
 
 let celsiusButton = document.querySelector("#celsius-button");
 celsiusButton.addEventListener("click", showCelsius);
+
+search("Rio de Janeiro");
