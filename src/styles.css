@@ -101,11 +101,11 @@ p {
 }
 .right-side {
   margin-right: 20px;
-  border-top: solid 2px rgba(56, 89, 139, 0.3);
+  border-top: solid 2px rgba(162, 168, 211, 0.5);
 }
 .left-side {
   margin-left: 20px;
-  border-top: solid 2px rgba(56, 89, 139, 0.3);
+  border-top: solid 2px rgba(162, 168, 211, 0.5);
 }
 .weekdays {
   font-family: "The Nautigal", cursive;
