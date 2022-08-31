@@ -25,8 +25,9 @@ function showTemperature(response) {
   console.log(response.data);
   document.querySelector("#city-name").innerHTML = response.data.name;
   celsiusTemperature = response.data.main.temp;
-  document.querySelector("#temperature").innerHTML =
-    Math.round(celsiusTemperature);
+  document.querySelector("#temperature").innerHTML = `${Math.round(
+    celsiusTemperature
+  )}°C`;
 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
@@ -65,7 +66,7 @@ function showFahrenheit(event) {
   celsius.classList.remove("active-button");
   celsius.classList.add("button");
 
-  let h2 = document.querySelector("h2");
+  let h2 = document.querySelector("#temperature");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   h2.innerHTML = `${Math.round(fahrenheitTemperature)}°F`;
 }
@@ -85,7 +86,7 @@ function showCelsius(event) {
   fahrenheit.classList.add("button");
   fahrenheit.classList.remove("active-button");
 
-  let h2 = document.querySelector("h2");
+  let h2 = document.querySelector("#temperature");
   h2.innerHTML = `${Math.round(celsiusTemperature)}°C`;
 }
 
