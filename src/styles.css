@@ -43,7 +43,7 @@ p {
 .reference {
   position: relative;
   margin-top: -45px;
-  margin-left: 250px;
+  margin-left: 260px;
 }
 .city {
   border: solid rgba(162, 168, 211, 0.5);
@@ -89,23 +89,16 @@ p {
   display: block;
   margin: 0 auto;
 }
-.col-4 {
-  padding: 40px 5px 20px 5px;
+hr {
+  border-top: 2px solid rgb(162, 168, 211);
+  width: 95%;
+  margin: 0 auto;
 }
 .col {
   border: none;
   background-color: none;
   text-align: center;
   padding: 10px 5px;
-  border-top: solid 2px rgba(162, 168, 211, 0.5);
-}
-.right-side {
-  margin-right: 20px;
-  border-top: solid 2px rgba(162, 168, 211, 0.5);
-}
-.left-side {
-  margin-left: 20px;
-  border-top: solid 2px rgba(162, 168, 211, 0.5);
 }
 .weekdays {
   font-family: "The Nautigal", cursive;
