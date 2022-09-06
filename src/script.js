@@ -103,41 +103,4 @@ function search(city) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-function showFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheit = document.querySelector("#fahrenheit-button");
-  fahrenheit.classList.remove("button");
-  fahrenheit.classList.add("active-button");
-
-  let celsius = document.querySelector("#celsius-button");
-  celsius.classList.remove("active-button");
-  celsius.classList.add("button");
-
-  let h2 = document.querySelector("#temperature");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  h2.innerHTML = `${Math.round(fahrenheitTemperature)}°F`;
-}
-
-let celsiusTemperature = null;
-
-let fahrenheitButton = document.querySelector("#fahrenheit-button");
-fahrenheitButton.addEventListener("click", showFahrenheit);
-
-function showCelsius(event) {
-  event.preventDefault();
-  let celsius = document.querySelector("#celsius-button");
-  celsius.classList.add("active-button");
-  celsius.classList.remove("button");
-
-  let fahrenheit = document.querySelector("#fahrenheit-button");
-  fahrenheit.classList.add("button");
-  fahrenheit.classList.remove("active-button");
-
-  let h2 = document.querySelector("#temperature");
-  h2.innerHTML = `${Math.round(celsiusTemperature)}°C`;
-}
-
-let celsiusButton = document.querySelector("#celsius-button");
-celsiusButton.addEventListener("click", showCelsius);
-
 search("Rio de Janeiro");
